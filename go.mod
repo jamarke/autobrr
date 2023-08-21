@@ -105,3 +105,7 @@ require (
 	modernc.org/strutil v1.1.3 // indirect
 	modernc.org/token v1.1.0 // indirect
 )
+
+replace github.com/ergochat/irc-go => ./irc-go
+
+replace github.com/autobrr/autobrr => ./
