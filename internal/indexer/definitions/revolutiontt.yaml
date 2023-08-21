@@ -25,7 +25,7 @@ irc:
   port: 7000
   tls: true
   channels:
-    - "#announce"
+    - "#vip"
   announcers:
     - RevoTT
   settings:
@@ -58,12 +58,12 @@ irc:
     type: single
     lines:
       - test:
-          - "!new Some.TV.Show.S01E02.720p.WEB.h264-KOGi | TV/HDx264 | https://revolutiontt.me/details.php?id=z4WBMrhj&hit=1"
-          - "!new Some.Other.Show.S01E02.1080p.WEB.h264-KOGi | TV/HDx264 | https://revolutiontt.me/details.php?id=eAg24buk&hit=1"
-        pattern: '!new (.*) \| (.*) \| (https?:\/\/.*\/).*id=([0-9a-zA-Z]+)'
+          - "[NEW TORRENT] in TV/HDx264 -> La Dona S01E46 1080p WEB H264 SKYFiRE | https://revolutiontt.me/details.php?id=zK7W33fY&hit=1"
+          - "[NEW TORRENT] in Music/FLAC -> Prose And Concepts Everything Is Nice REISSUE CD FLAC 2023 AUDiOFiLE | https://revolutiontt.me/details.php?id=5LD7RVID&hit=1"
+        pattern: '\[NEW TORRENT\] in (.*) -> (.*) \| (https?:\/\/.*\/).*id=([0-9a-zA-Z]+)'
         vars:
-          - torrentName
           - category
+          - torrentName
           - baseUrl
           - torrentId
 
