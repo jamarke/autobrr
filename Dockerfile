@@ -20,6 +20,7 @@ ENV SERVICE=autobrr
 WORKDIR /src
 
 COPY go.mod go.sum ./
+COPY irc-go/go.mod irc-go/go.sum ./
 RUN go mod download
 
 COPY . ./
@@ -36,7 +37,7 @@ RUN go build -ldflags "-s -w -X main.version=${VERSION} -X main.commit=${REVISIO
 # build runner
 FROM alpine:latest
 
-LABEL org.opencontainers.image.source = "https://github.com/autobrr/autobrr"
+LABEL org.opencontainers.image.source = "https://github.com/jamarke/autobrr"
 
 ENV HOME="/config" \
     XDG_CONFIG_HOME="/config" \
