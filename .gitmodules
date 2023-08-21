@@ -1,0 +1,3 @@
+[submodule "irc-go"]
+	path = irc-go
+	url = https://github.com/jamarke/irc-go.git
